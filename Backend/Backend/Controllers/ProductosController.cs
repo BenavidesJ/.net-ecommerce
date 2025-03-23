@@ -24,9 +24,18 @@ namespace Backend.Controllers
             var productos = await _context.productos
                 .Select(p => new ProductoDTO
                 {
+                    ID = p.ID,
                     Nombre = p.Nombre,
                     Cantidad = p.Cantidad,
-                    Costo = p.Costo
+                    Costo = p.Costo,
+                    Presentaciones = p.Presentaciones.Select(p => new PresentacionProductoDTO
+                    {
+                        ProductoID = p.ProductoID,
+                        Color = p.Color,
+                        Tamano = p.Tamano,
+                        SKU = p.SKU,
+                        Imagen = p.Imagen
+                    }).ToList()
                 })
                 .ToListAsync();
 
@@ -49,6 +58,7 @@ namespace Backend.Controllers
             // Mapear el ProductoDTO
             var productoDTO = new ProductoDTO
             {
+                ID = producto.ID,
                 Nombre = producto.Nombre,
                 Cantidad = producto.Cantidad,
                 Costo = producto.Costo,
@@ -85,7 +95,8 @@ namespace Backend.Controllers
             _context.productos.Add(producto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetProductoById), new { id = producto.ID }, productoDTO);
+            return CreatedAtAction(nameof(GetProductoById), new { id = producto.ID }, producto);
+
         }
 
         // PATCH: api/productos/{id}
@@ -165,6 +176,7 @@ namespace Backend.Controllers
             var presentaciones = producto.Presentaciones.Select(p => new PresentacionProductoDTO
             {
                 ProductoID = p.ProductoID,
+                PresentacionID = p.ID,
                 Color = p.Color,
                 Tamano = p.Tamano,
                 SKU = p.SKU,

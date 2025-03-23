@@ -76,6 +76,13 @@ namespace Backend.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("estadoPedidos");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            DescripcionEstado = "Pendiente"
+                        });
                 });
 
             modelBuilder.Entity("Backend.Entities.Pedido", b =>
@@ -246,7 +253,7 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Entities.Pedido", b =>
                 {
-                    b.HasOne("Backend.Entities.EstadoPedido", "EstadoPedido")
+                    b.HasOne("Backend.Entities.EstadoPedido", "Estado")
                         .WithMany("Pedidos")
                         .HasForeignKey("EstadoID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -258,7 +265,7 @@ namespace Backend.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("EstadoPedido");
+                    b.Navigation("Estado");
 
                     b.Navigation("Usuario");
                 });

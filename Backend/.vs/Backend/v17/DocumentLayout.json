@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\",
+  "WorkspaceRootPath": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\backend\\dotnet\\proyectoarquitecturasoft\\be\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Migrations\\20250323214523_estadoPedidoSeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Backend\\Migrations\\20250323214523_estadoPedidoSeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\backend\\dotnet\\proyectoarquitecturasoft\\be\\backend\\backend\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\proyecto_grupo1-arquitectura_de_software\\be\\backend\\backend\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\backend\\dotnet\\proyectoarquitecturasoft\\be\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\proyecto_grupo1-arquitectura_de_software\\be\\backend\\backend\\controllers\\estadopedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\estadopedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\proyecto_grupo1-arquitectura_de_software\\be\\backend\\backend\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\proyecto_grupo1-arquitectura_de_software\\be\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\backend\\dotnet\\proyectoarquitecturasoft\\be\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\backend\\dotnet\\proyectoarquitecturasoft\\be\\backend\\backend\\lib\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\lib\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|d:\\backend\\dotnet\\proyectoarquitecturasoft\\be\\backend\\backend\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08A7D8B-C03B-47CD-9C3C-292E416DCC6F}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,84 +50,76 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "Backend\\appsettings.json",
-              "ToolTip": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\appsettings.json",
-              "RelativeToolTip": "Backend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-04T00:59:41.245Z"
+              "DocumentIndex": 0,
+              "Title": "20250323214523_estadoPedidoSeed.cs",
+              "DocumentMoniker": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Migrations\\20250323214523_estadoPedidoSeed.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20250323214523_estadoPedidoSeed.cs",
+              "ToolTip": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Migrations\\20250323214523_estadoPedidoSeed.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20250323214523_estadoPedidoSeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T21:45:23.331Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DBContext.cs",
-              "DocumentMoniker": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Data\\DBContext.cs",
+              "DocumentMoniker": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Data\\DBContext.cs",
               "RelativeDocumentMoniker": "Backend\\Data\\DBContext.cs",
-              "ToolTip": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Data\\DBContext.cs",
+              "ToolTip": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Data\\DBContext.cs",
               "RelativeToolTip": "Backend\\Data\\DBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T00:54:35.37Z"
+              "WhenOpened": "2025-03-23T21:41:28.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Backend\\Program.cs",
-              "ToolTip": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Program.cs",
-              "RelativeToolTip": "Backend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "EstadoPedidoController.cs",
+              "DocumentMoniker": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Controllers\\EstadoPedidoController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\EstadoPedidoController.cs",
+              "ToolTip": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Controllers\\EstadoPedidoController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\EstadoPedidoController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T02:55:11.09Z",
+              "WhenOpened": "2025-03-23T21:40:35.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Controllers\\PedidosController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\PedidosController.cs",
+              "ToolTip": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Controllers\\PedidosController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\PedidosController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAYwPUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T21:39:52.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Utilities.cs",
-              "DocumentMoniker": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Lib\\Utilities.cs",
-              "RelativeDocumentMoniker": "Backend\\Lib\\Utilities.cs",
-              "ToolTip": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Lib\\Utilities.cs",
-              "RelativeToolTip": "Backend\\Lib\\Utilities.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T02:38:39.261Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Backend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:41:01.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthDTO.cs",
-              "DocumentMoniker": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\DTOs\\AuthDTO.cs",
-              "RelativeDocumentMoniker": "Backend\\DTOs\\AuthDTO.cs",
-              "ToolTip": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\DTOs\\AuthDTO.cs",
-              "RelativeToolTip": "Backend\\DTOs\\AuthDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:40:44.601Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "Backend\\appsettings.json",
+              "ToolTip": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\appsettings.json",
+              "RelativeToolTip": "Backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T21:26:33.334Z",
+              "EditorCaption": ""
             }
           ]
         }

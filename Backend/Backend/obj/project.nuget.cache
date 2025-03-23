@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ucyXMZtnHHc=",
+  "dgSpecHash": "9tfx3d0XSi8=",
   "success": true,
-  "projectFilePath": "D:\\BACKEND\\DOTNET\\ProyectoArquitecturaSoft\\BE\\Backend\\Backend\\Backend.csproj",
+  "projectFilePath": "D:\\Proyecto_Grupo1-Arquitectura_de_software\\BE\\Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jdani\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\jdani\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

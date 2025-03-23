@@ -8,6 +8,7 @@ import {
   ChevronsUpDown,
   LogOut,
   CreditCard,
+  ShoppingCartIcon,
 } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -21,7 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenu as SidebarMenuShadcn,
-} from '../ui/sidebar';
+} from '@/components/ui/sidebar';
 import { useNavigate } from 'react-router';
 import { ThemeToggle } from './ThemeToggle';
 import {
@@ -32,7 +33,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '../ui/dropdown-menu';
+} from '@/components/ui/dropdown-menu';
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -41,30 +42,57 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from '../ui/alert-dialog';
+} from '@/components/ui/alert-dialog';
 import { useState } from 'react';
 import { useAuth } from '@/context';
+import { getInitials } from '@/lib/utils';
+import { EditUserModal } from './EditUserModal';
+import { useCart } from '@/context/CartContext';
+import { Badge } from '@/components/ui/badge';
 
 const items = [
   {
-    title: 'Principal',
-    url: '/dashboard',
-    icon: Home,
-  },
-  {
     title: 'Gestion de Usuarios',
     url: '/gestion-usuarios',
+    admin: true,
     icon: UserPlus2,
   },
   {
     title: 'Gestion de Pedidos',
     url: '/gestion-pedidos',
+    admin: true,
     icon: Truck,
   },
   {
     title: 'Gestion de Productos',
     url: '/gestion-productos',
+    admin: true,
     icon: Package2,
+  },
+  {
+    title: 'Preferencias',
+    icon: Settings,
+  },
+];
+
+const clientItems = [
+  {
+    title: 'Principal',
+    url: '/dashboard',
+    admin: false,
+    icon: Home,
+  },
+  {
+    title: 'Carrito de Compras',
+    url: '/compras',
+    admin: false,
+    icon: ShoppingCartIcon,
+  },
+  {
+    title: 'Ver mis Pedidos',
+    url: '/pedidos',
+    admin: false,
+    icon: Truck,
   },
   {
     title: 'Preferencias',
@@ -74,7 +102,14 @@ const items = [
 
 export const SidebarMenuApp = () => {
   const [openSettings, setOpenSettings] = useState(false);
-  const { signOffUser, currentUser } = useAuth();
+  const { signOffUser, currentUser, setCurrentUser, isAdmin } = useAuth();
+  const { totalItems } = useCart();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const initials = getInitials(
+    currentUser?.id,
+    currentUser?.nombre,
+    currentUser?.apellido
+  );
   const nav = useNavigate();
   return (
     <>
@@ -108,25 +143,65 @@ export const SidebarMenuApp = () => {
           <SidebarGroup>
             <SidebarGroupContent>
               <SidebarMenuShadcn>
-                {items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
-                      {item.title === 'Preferencias' ? (
-                        <button onClick={() => setOpenSettings(true)}>
-                          <item.icon />
-                          <span>{item.title}</span>
-                        </button>
-                      ) : (
-                        <button
-                          onClick={() => nav(item.url!, { replace: true })}
-                        >
-                          <item.icon />
-                          <span>{item.title}</span>
-                        </button>
-                      )}
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
+                <>
+                  {isAdmin ? (
+                    <>
+                      {items.map((item) => (
+                        <>
+                          <SidebarMenuItem key={item.title}>
+                            <SidebarMenuButton asChild>
+                              {item.title === 'Preferencias' ? (
+                                <button onClick={() => setOpenSettings(true)}>
+                                  <item.icon />
+                                  <span>{item.title}</span>
+                                </button>
+                              ) : (
+                                <button
+                                  onClick={() =>
+                                    nav(item.url!, { replace: true })
+                                  }
+                                >
+                                  <item.icon />
+                                  <span>{item.title}</span>
+                                </button>
+                              )}
+                            </SidebarMenuButton>
+                          </SidebarMenuItem>
+                        </>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      {clientItems.map((item) => (
+                        <SidebarMenuItem key={item.title}>
+                          <SidebarMenuButton asChild>
+                            {item.title === 'Preferencias' ? (
+                              <button onClick={() => setOpenSettings(true)}>
+                                <item.icon />
+                                <span>{item.title}</span>
+                              </button>
+                            ) : (
+                              <button
+                                onClick={() =>
+                                  nav(item.url!, { replace: true })
+                                }
+                              >
+                                <item.icon />
+                                <span>{item.title}</span>
+                                {item.title === 'Carrito de Compras' &&
+                                  totalItems > 0 && (
+                                    <Badge variant="destructive">
+                                      {totalItems}
+                                    </Badge>
+                                  )}
+                              </button>
+                            )}
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      ))}
+                    </>
+                  )}
+                </>
               </SidebarMenuShadcn>
             </SidebarGroupContent>
           </SidebarGroup>
@@ -143,10 +218,14 @@ export const SidebarMenuApp = () => {
                   >
                     <Avatar className="h-8 w-8 rounded-lg">
                       <AvatarImage src={''} alt={''} />
-                      <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                      <AvatarFallback className="rounded-lg">
+                        {initials}
+                      </AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
-                      <span className="truncate font-semibold">{'User'}</span>
+                      <span className="truncate font-semibold">
+                        {!currentUser?.nombre ? 'Usuario' : currentUser.nombre}
+                      </span>
                       <span className="truncate text-xs">
                         {currentUser?.correo}
                       </span>
@@ -168,15 +247,17 @@ export const SidebarMenuApp = () => {
                           alt={'data.user.name'}
                         />
                         <AvatarFallback className="rounded-lg">
-                          CN
+                          {initials}
                         </AvatarFallback>
                       </Avatar>
                       <div className="grid flex-1 text-left text-sm leading-tight">
                         <span className="truncate font-semibold">
-                          {'data.user.name'}
+                          {!currentUser?.nombre
+                            ? 'Usuario'
+                            : currentUser.nombre}
                         </span>
                         <span className="truncate text-xs">
-                          {'data.user.email'}
+                          {!currentUser?.correo ? 'Correo' : currentUser.correo}
                         </span>
                       </div>
                     </div>
@@ -187,13 +268,13 @@ export const SidebarMenuApp = () => {
                   <DropdownMenuGroup>
                     <DropdownMenuItem>
                       <BadgeCheck />
-                      <button onClick={() => nav('/perfil', { replace: true })}>
+                      <button onClick={() => setIsModalOpen(true)}>
                         <span>Perfil</span>
                       </button>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <CreditCard />
-                      Billing
+                      Metodo de pago
                     </DropdownMenuItem>
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
@@ -236,6 +317,16 @@ export const SidebarMenuApp = () => {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      {currentUser && (
+        <EditUserModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          userID={currentUser.id}
+          onModify={setCurrentUser}
+          isProfilePage
+        />
+      )}
     </>
   );
 };

@@ -3,6 +3,8 @@
     public class PresentacionProductoDTO
     {
         public int ProductoID { get; set; }
+
+        public int PresentacionID { get; set; }
         public string Color { get; set; }
         public string Tamano { get; set; }
         public string SKU { get; set; }
